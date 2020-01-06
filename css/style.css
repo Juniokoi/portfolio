@@ -121,6 +121,8 @@ img:hover {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  color: #fff;
+  background-color: rgb(95, 95, 95)7, 27, 27);
 }
 .box {
   width: 300px;
