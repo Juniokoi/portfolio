@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* -------- Ajustes de posicionamento/grid --------------------- */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-areas:
+    "header . ."
+    "main main main"
+    "pj pj pj"
+    ". footer .";
+  margin: 0;
+}
+header {
+  display: grid;
+  grid-area: header;
+}
+main {
+  display: grid;
+  grid-area: main;
+}
+footer {
+  display: grid;
+  bottom: 0;
+  grid-area: footer;
+}
+.projects {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ------------------------------------ a ----------------------------------- */
+.blocs {
+  grid-area: pj;
+  display: grid;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+}
