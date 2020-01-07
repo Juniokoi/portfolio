@@ -1,50 +1,5 @@
-<<<<<<< HEAD
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto|Zilla+Slab&display=swap");
 
-/* -------- Ajustes de posicionamento/grid --------------------- */
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  grid-template-areas:
-    "header . ."
-    "main main main"
-    "pj pj pj"
-    ". footer .";
-  margin: 0;
-}
-header {
-  display: grid;
-  grid-area: header;
-}
-main {
-  display: grid;
-  grid-area: main;
-}
-footer {
-  display: grid;
-  bottom: 0;
-  grid-area: footer;
-}
-.projects {
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* ------------------------------------ a ----------------------------------- */
-.blocs {
-  grid-area: pj;
-  display: grid;
-  width: 25px;
-  height: 25px;
-  background-color: red;
-=======
 * {
   content: "";
   box-sizing: border-box;
@@ -72,7 +27,7 @@ body {
   flex-direction: row;
   width: 100vw;
   margin: 0;
-  justify-content: right;
+  justify-content: flex-end;
   list-style-type: none;
 }
 #navbar ul li {
@@ -101,7 +56,15 @@ body {
   );
   color: #000;
 }
-
+/* Fonts and sizes */
+nav,
+h1 {
+  font-family: "Zilla Slab", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+}
+p {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
 /* Name and stuffs */
 
 #welcome::before {
@@ -119,7 +82,7 @@ body {
       rgba(95, 34, 46, 0.644) 0%,
       rgba(30, 41, 98, 0.685) 100%
     ),
-    url("https://data.whicdn.com/images/269869933/original.gif");
+    url("/img/koi.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -188,8 +151,10 @@ img:hover {
   display: flex;
   margin: 30px;
   width: 300px;
-  justify-self: center;
+  justify-items: center;
   padding-top: 5em;
   margin: 0 auto;
->>>>>>> e278c26e5f6fb978e81d6504166b75e322046c96
+  text-align: center;
+  right: 0;
+  left: 0;
 }
