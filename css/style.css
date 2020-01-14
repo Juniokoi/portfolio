@@ -5,6 +5,8 @@
 }
 body {
 	margin: 0;
+	background-color: rgb(199, 199, 199);
+	width: 100vw;
 }
 
 /* Adjusting the Navigation bar */
@@ -39,10 +41,12 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 }
+
 /* To not make the navbar bug when shrink */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
 	#navbar ul li {
 		padding: 0 3rem;
+		font-size: 1.3rem;
 	}
 }
 
@@ -67,7 +71,9 @@ p {
 	font-family: 'roboto', Arial, Helvetica, sans-serif;
 }
 
-/* Name and stuffs */
+/* -------------------------------------------------------------------------- */
+/* KOI FISHES */
+/* -------------------------------------------------------------------------- */
 
 #welcome::before {
 	content: '';
@@ -93,8 +99,6 @@ p {
 	box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.75);
 }
 @media screen and (max-width: 1024px) {
-	#body {
-	}
 	#welcome {
 		width: 100%;
 		border-radius: 0 0 50rem 50rem;
@@ -116,11 +120,47 @@ p {
 .desc {
 	text-shadow: 2px 2px 4px #000000e3;
 }
+.title {
+	font-size: 3rem;
+}
 em {
 	color: red;
 }
 
-/* Itens for portfolio*/
+/*BLINKING ANIMATION*/
+
+.blink {
+	color: #000;
+	-webkit-animation: blink 2s steps(1, end) infinite both;
+	animation: blink 1.5s steps(1, end) infinite both;
+}
+
+@-webkit-keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/* ITEMS FOR PORTFOLIO */
+/* -------------------------------------------------------------------------- */
 img {
 	width: 200px;
 	height: 200px;
@@ -138,6 +178,12 @@ img:hover {
 	grid-template-columns: 1fr 0.5fr 1fr;
 	grid-template-areas: '. box .';
 }
+@media screen and (max-width: 700px) {
+	#projectsu {
+		grid-template-columns: 0fr 1fr 0fr;
+		grid-template-areas: '. box .';
+	}
+}
 #projects {
 	grid-area: box;
 	display: grid;
@@ -150,6 +196,7 @@ img:hover {
 }
 
 .box {
+	border-radius: 5px;
 	padding-top: 50px;
 	width: 300px;
 	margin: 10px;
@@ -158,17 +205,23 @@ img:hover {
 	justify-items: center;
 	text-align: center;
 	display: grid;
+	-webkit-box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.4);
 }
 .name {
-	display: flex;
+	display: GRID;
 	margin: 30px;
-	width: 300px;
-	justify-items: center;
+	justify-self: center;
+	width: 40rem;
 	padding-top: 5em;
 	margin: 0 auto;
 	text-align: center;
 	right: 0;
 	left: 0;
+	text-transform: uppercase;
+}
+hr {
+	width: 50%;
 }
 .link {
 	/* position: relative; */
@@ -188,6 +241,27 @@ h1 {
 :link {
 	text-decoration: none;
 }
+
+/*Buttons*/
+
+.btn {
+	height: 40px;
+	width: 104px;
+	color: #fff;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 5px solid rgb(231, 231, 231);
+	text-transform: lowercase;
+	cursor: pointer;
+}
+
+.more {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 400px;
+}
+
 /*~~~~~~~~~~Mobile Devices~~~~~~~~~*/
 @media screen and (max-width: 700px) {
 	#welcome,
