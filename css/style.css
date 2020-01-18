@@ -253,6 +253,7 @@ h1 {
 	border: 5px solid rgb(231, 231, 231);
 	text-transform: lowercase;
 	cursor: pointer;
+	transition: 0.5;
 }
 
 .more {
@@ -260,6 +261,42 @@ h1 {
 	display: grid;
 	place-items: center;
 	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.more .btn {
+	height: 60px;
+	width: 160px;
+	background-color: #000;
+	border: none;
+	border-radius: 10px;
+	transition: 0.5s;
+	text-transform: uppercase;
+}
+.more .btn:hover {
+	background-color: #fff;
+	background-position: center left;
+}
+.btn-grad {
+	background-image: linear-gradient(
+		to right,
+		#feac5e 0%,
+		#c779d0 100%,
+		#feac5e 151%
+	);
+}
+
+/* ------------------------------------------------------------------------- */
+/* SOCIAL MEDIAS */
+/* ------------------------------------------------------------------------- */
+]
+
+ #social {
+	display: grid;
+	width: auto;
+	height: 300px !important;
+	background-color: black;
 }
 
 /*~~~~~~~~~~Mobile Devices~~~~~~~~~*/
