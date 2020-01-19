@@ -6,7 +6,7 @@
 body {
 	margin: 0;
 	background-color: rgb(199, 199, 199);
-	width: 100vw;
+	/* width: 100vw; */
 }
 
 /* Adjusting the Navigation bar */
@@ -83,7 +83,7 @@ p {
 	/* z-index: -1; */
 	display: grid;
 	height: 100vh;
-	width: 100vw;
+	/* width: 99vw; */
 	background: linear;
 	background-image: linear-gradient(
 			90deg,
@@ -220,8 +220,11 @@ img:hover {
 	left: 0;
 	text-transform: uppercase;
 }
-hr {
-	width: 50%;
+.name hr {
+	display: grid;
+	justify-self: center;
+	width: 200%;
+	border: 2px solid #2c2c2c;
 }
 .link {
 	/* position: relative; */
@@ -290,13 +293,76 @@ h1 {
 /* ------------------------------------------------------------------------- */
 /* SOCIAL MEDIAS */
 /* ------------------------------------------------------------------------- */
-]
 
- #social {
+#social {
 	display: grid;
 	width: auto;
-	height: 300px !important;
-	background-color: black;
+	height: 600px !important;
+	background-color: #2c2c2c;
+}
+.block {
+	display: grid;
+	margin: 0 auto;
+	align-content: center;
+	justify-content: space-around;
+	text-align: center;
+}
+.block h1,
+.block p {
+	margin: 5px;
+	color: #f0f0f0;
+}
+.block h1 {
+	font-size: 4rem;
+}
+.block p {
+	padding: 30px;
+	font-size: 2em;
+}
+.links {
+	margin-top: 30px;
+	display: flex;
+	gap: 20px;
+	justify-self: center;
+	font-size: 2em;
+}
+.links a {
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+.links a:hover {
+	animation: text-pop-up-bottom 0.5s
+		cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	/* -webkit-transition: reverse 1s ease; */
+	transition: transform 0.3s ease-out;
+}
+
+@keyframes text-pop-up-bottom {
+	0% {
+		transform: translateY(0);
+		transform-origin: 50% 50%;
+		text-shadow: none;
+	}
+	100% {
+		transform: translateY(5px);
+		transform-origin: 50% 50%;
+		text-shadow: 0 1px 0 #818181, 0 2px 0 #818181,
+			0 3px 0 #818181, 0 4px 0 #818181, 0 5px 0 #818181,
+			0 6px 0 #818181, 0 7px 0 #818181, 0 8px 0 #818181,
+			0 9px 0 #818181, 0 50px 30px rgba(0, 0, 0, 0.3);
+	}
+}
+hr {
+	border: 5px solid rgb(255, 0, 55);
+	margin: 0;
+}
+footer {
+	background-color: #2c2c2c;
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	font-size: 1.5em;
+	color: #f0f0f0;
 }
 
 /*~~~~~~~~~~Mobile Devices~~~~~~~~~*/
