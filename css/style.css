@@ -90,7 +90,7 @@ p {
 			rgba(95, 34, 46, 0.644) 0%,
 			rgba(30, 41, 98, 0.685) 100%
 		),
-		url('/img/koi.gif');
+		url('img/koi.gif');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
